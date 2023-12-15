@@ -1,0 +1,11 @@
+---
+- name: Reboot RHEL Virtual Machines and Update
+  hosts: All-Linux
+  become: yes
+  tasks:
+    - name: Reboot VMs
+      reboot:
+
+    - name: Wait for SSH to be available
+      wait_for_connection:
+        timeout: 300  # Adjust timeout as needed
