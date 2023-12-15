@@ -1,0 +1,11 @@
+---
+- name: Subscribe Red Hat VM
+  hosts: app-02
+  become: yes
+  tasks:
+    - name: Register the system with Red Hat Subscription Manager
+      redhat_subscription:
+        state: present
+        username: 
+        password: 
+        auto_attach: yes

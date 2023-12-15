@@ -1,0 +1,7 @@
+---
+- name: Ping test with Ansible
+  hosts: All-Linux
+  tasks:
+    - name: Ping the hosts
+      ping:
+      
